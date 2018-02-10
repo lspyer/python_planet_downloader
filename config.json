@@ -1,0 +1,58 @@
+{
+  "item_types_assets": {
+    "PSScene3Band": ["visual", "visual_xml"],
+    "PSOrthoTile": ["visual", "visual_xml"]
+  },
+  "download_directory": "../imagery/automatic",
+  "stats_endpoint_request": {
+    "name": "search",
+    "interval": "day",
+    "item_types": [
+      "PSScene3Band",
+      "PSOrthoTile"
+    ],
+    "filter": {
+      "type": "AndFilter",
+      "config": [
+        {
+          "type": "GeometryFilter",
+          "field_name": "geometry",
+          "config": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -122.50494003295897,
+                  37.80069677827669
+                ],
+                [
+                  -122.45378494262697,
+                  37.80069677827669
+                ],
+                [
+                  -122.45378494262697,
+                  37.838801170343544
+                ],
+                [
+                  -122.50494003295897,
+                  37.838801170343544
+                ],
+                [
+                  -122.50494003295897,
+                  37.80069677827669
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "type": "DateRangeFilter",
+          "field_name": "acquired",
+          "config": {
+            "gte": "2017-01-01T00:00:00.000Z"
+          }
+        }
+      ]
+    }
+  }
+}
