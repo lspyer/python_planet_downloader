@@ -4,14 +4,15 @@ A python script for downloading Planet Labs Inc. imagery
 ```pip install planet```
 
 ```pip install joblib```
-
-```pip install azure-storage-blob``
+#### for Azure blob storage define the following:
+```pip install azure-storage-blob```
 
 ## configure environment variables
-```export PL_API_KEY=put_your_api_key_here```
-### for Azure blob storage define the following:
-```export AZURE_BS_ACC_NAME=put_your_account_name_here```
-```export AZURE_BS_API_KEY=put_your_api_key_here```
+```export PL_API_KEY=<put_your_api_key_here>```
+#### for Azure blob storage define the following:
+```export AZURE_BS_ACC_NAME=<put_your_account_name_here>```
+
+```export AZURE_BS_API_KEY=<put_your_api_key_here>```
 
 ## run
 
