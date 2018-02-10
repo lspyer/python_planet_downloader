@@ -6,4 +6,4 @@ A python script for downloading Planet Labs Inc. imagery
 ```pip install joblib```
 
 ## run
-python planet_downloader.py config.json
+```python planet_downloader.py config.json```
