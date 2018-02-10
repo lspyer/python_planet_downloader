@@ -1,9 +1,9 @@
 {
+  "download_directory": "../imagery/automatic",
   "item_types_assets": {
     "PSScene3Band": ["visual", "visual_xml"],
     "PSOrthoTile": ["visual", "visual_xml"]
   },
-  "download_directory": "../imagery/automatic",
   "stats_endpoint_request": {
     "name": "search",
     "interval": "day",
