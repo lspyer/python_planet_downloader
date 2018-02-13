@@ -65,7 +65,7 @@ def handle_page(page):
     print(index, acquired, item_type, item_id, sep='\t')
 
     if is_item_inactive(asset, item_type):
-      t = threading.Thread(name='activate_visual', target=activate_visual, args=(feature,asset,))
+      t = threading.Thread(name='activate_asset', target=activate_asset, args=(feature,asset,))
       t.start()
     else:
       print(feature["id"], "is active")
@@ -82,17 +82,17 @@ def handle_page(page):
 
 def is_item_inactive(asset, item_type):
   for file in item_types_files[item_type]:
-    if asset["visual"]["status"] == 'inactive':
+    if asset[file]["status"] == 'inactive':
       return True
   return False
 
 def is_item_active(asset, item_type):
   for file in item_types_files[item_type]:
-    if asset["visual"]["status"] != 'active':
+    if asset[file]["status"] != 'active':
       return False
   return True
 
-def activate_visual(feature, asset):
+def activate_asset(feature, asset):
   global pool_sema
   pool_sema.acquire()
 
